@@ -5,13 +5,11 @@ const User = React.createClass({
   render() {
     const { employee } = this.props;
     return (
-      <div className="">
-        <div className="">
-          <Link to={`/${employee.username}`}>
-            <h1>{employee.username}</h1>
-            {/*}<img src={employee.display_src} alt={employee.username} className="grid-photo" />*/}
-          </Link>
-        </div>
+      <div className="border-left px2 mb3">
+        <Link className="text-decoration-none" to={`/${employee.username}`}>
+          <h2 className="h3 black mb0">{employee.first} {employee.last}</h2>
+          <h3 className="regular h4 gray italic mt0">{employee.username}</h3>
+        </Link>
       </div>
     )
   }
